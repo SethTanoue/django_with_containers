@@ -1,0 +1,4 @@
+--- # basic robot
+- model: robots.robot
+  fields:
+    message: hello, world!

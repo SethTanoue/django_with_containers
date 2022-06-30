@@ -1,0 +1,15 @@
+{% if robot_list %}
+    <ul>
+    {% for robot in robot_list %}
+        <li>
+          {{ robot.message }}
+          <span><a href="{% url 'robots:update' robot.id %}">edit</a></span>
+          <span><a href="{% url 'robots:delete' robot.id %}">delete</a></span>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No robots are available.</p>
+{% endif %}
+<a href="{% url 'robots:create' %}">Create a New Robot<br></a>
+<a href="{% url 'robots:newPage' %}">!!!NEW CONTENT!!!</a>
